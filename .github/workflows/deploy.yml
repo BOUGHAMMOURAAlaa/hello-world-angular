@@ -14,9 +14,9 @@ jobs:
         with:
           node-version: '20'
       - run: npm install
-      - run: npm run build -- --prod
+      - run: npm run build -- --configuration production --output-mode=browser
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: dist/hello-world-angular
+          folder: dist/hello-world-angular/browser
